@@ -1,0 +1,389 @@
+/* body,html{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;  
+    padding: 0px;
+    margin: 0px;
+} */
+
+.layout{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    min-height: 10px;
+}
+
+.layout *{
+    box-sizing: border-box;
+}
+
+.layout-canvas{
+    /* position: relative;
+    width: 100%;
+    height: 100%; */
+}
+
+.layout-canvas.rtl{
+    direction: rtl;
+}
+
+.layout-window{}
+
+.layout-bar{
+    position: fixed;
+    bottom:0px;
+    background: rgba(0, 0, 0, 0.32);
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout h1{
+    margin: 0;
+}
+
+.layout h2{
+    margin: 0;
+}
+
+.layout-table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.layout-table > tr > td{
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.layout-crumbs{}
+.layout-crumb{
+    display: inline-block;
+}
+.layout-crumb:hover{
+    color: green;
+    cursor: pointer;
+}
+.layout-crumb-seperator{
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: rgb(111, 111, 111);
+}
+
+.layout-left{
+    float: left;
+}
+.layout-right{
+    float: right;
+}
+.layout-clear{
+    clear: both;
+}
+
+.layout-selection{
+    padding: 5px;
+}
+
+.layout-menu{
+    padding: 4px;
+    font-size: 12px;
+}
+
+.layout-menu .layout-button{background:#333;padding: 5px;padding-left:5px;padding-right:5px;border-radius:2px;display: inline-block;margin-left: 3px;}
+.layout-menu .layout-button:hover{
+    background: rgb(0, 81, 146);
+    cursor:pointer;
+}
+
+.layout-a4{
+    width: 1024px;
+    min-height: 1024px;
+    background: rgb(255, 255, 255);
+    margin: 0px auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.layout-hovered{
+    outline: 2px dashed rgba(0, 128, 0, 0.19);
+    position: relative;
+}
+
+.layout-selected{
+    outline: 2px dashed rgba(255, 165, 0, 0.15);
+    position: relative;
+}
+
+.layout-element-menu{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 10px;
+    padding: 0px;
+}
+
+.layout-element-menu:hover{
+    
+}
+
+.layout-element-menu-button{
+    cursor: pointer;
+    padding: 3px;
+    user-select: none;
+    display: inline-block;
+}
+
+.layout-element-menu-button:hover{
+    color: rgb(2, 183, 255);
+    background: rgb(16, 16, 16);
+}
+
+
+.layout-split-h{
+    position: absolute;
+    border-bottom: 1px dashed rgb(158, 158, 158);
+    width: 100%;
+    pointer-events: none;
+    left:0;
+}
+
+.layout-split-v{
+    position: absolute;
+    border-left: 1px dashed rgb(158, 158, 158);
+    height: 100%;
+    pointer-events: none;
+    top:0;
+}
+
+.layout-middle{
+    display: inline-block;
+}
+
+.css-editor{
+
+}
+
+.css-editor .selector-select{
+
+}
+
+.css-editor .selector-select select{
+
+font-size: 18px;
+
+padding: 5px;
+
+width: 100%;
+
+font-family: monospace;
+}
+
+.css-editor .rule{
+    font-family: monospace;
+    margin-top: 10px;
+}
+
+.css-editor .rule .style{}
+
+.css-editor .rule .style > *{
+    display: inline-block;
+    padding: 3px;
+}
+
+.css-editor .rule .style-property{
+}
+
+.css-editor .rule .style-seperator{
+}
+
+.css-editor .rule .style-value{
+}
+
+.css-editor .rule .style-breaker{
+}
+
+.css-editor .rule .style-property:hover{
+
+}
+
+.css-editor .rule .style-value:hover{
+    
+}
+
+.css-editor .css-menu{
+
+}
+
+.table-builder{
+    width: 560px;
+}
+
+.table-builder-top{
+
+}
+
+.table-builder-input{
+
+display: inline-block;
+
+width: 90px;
+
+padding: 3px;
+}
+
+.table-builder-input input{
+
+width: 100%;
+
+padding: 3px;
+
+font-size: 14px;
+}
+
+.table-builder-input-title{
+
+font-size: 11px;
+
+margin-bottom: 2px;
+}
+
+
+.table-builder-selected{
+    padding: 3px;
+    margin-top: 10px;
+}
+.table-builder-stage{
+    height: 200px;
+    padding: 3px;
+    margin-top: 10px;
+    position: relative;
+}
+.table-builder-buttons{
+    padding: 3px;
+    margin-top: 10px;
+}
+
+.table-builder-button{
+    background: green;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.table-builder-button:hover{
+    
+}
+
+.table-builder-selected table{
+
+width: 100%;
+
+border-collapse: collapse;
+
+border-spacing: 0;
+}
+.table-builder-selected table td{
+
+padding: 0;
+
+border: 1px solid #ccc;
+
+vertical-align: text-bottom;
+}
+.table-builder-selected-part{
+    width: 50%;
+}
+.selected-part-options{}
+.selected-part-title{
+    background: rgb(232, 232, 232);
+    padding: 5px;
+}
+
+.table-builder-selected-row{
+}
+.table-builder-selected-row:before{
+}
+.table-builder-selected-cell{
+    
+}
+.table-builder-marker{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.table-builder-marker.row{
+    background: green;   
+}
+
+.table-builder-marker.col{
+    background: orange;
+}
+
+.table-builder-stage:hover .table-builder-selected-row{
+    border:2px solid green;
+}
+
+.table-builder-stage:hover .table-builder-selected-cell{
+    background: rgba(0,0,0,0.2);
+}
+
+.table-builder-stage td:hover{
+    background: rgba(0,0,0,0.1) !important;
+}
+
+.picker-title{
+    font-size: 11px;
+    text-align: left;
+    padding: 3px;
+}
+
+.tags-popup{
+    width: 542px;
+}
+
+.tags-popup .popup-option{
+    display: inline-block;
+    margin: 1px;
+    margin-bottom: 1px !important;
+    width: 125px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.layout-menu-popup{
+    min-width: 0 !important;
+}
+
+.layout-menu-popup .popup-title{
+    padding: 5px !important;
+    font-size: 11px;
+    text-align: center;
+}
+
+.layout-menu-popup .popup-body{
+    padding: 0px !important;
+}
+
+.layout-menu-body-button{
+    
+text-align: center;
+    
+padding: 5px;
+    
+font-size: 15px;
+}
+
+.layout-menu-body-button:hover{
+    background: #607D8B;
+    cursor: pointer;
+    color: #fff;
+}
+
+.layout-menu-button{
+
+}

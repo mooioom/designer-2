@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Canvas Designer</title>
+
+    <script src="js/canvas.js"></script>
+
+    <script src="js/editor/editor.js"></script>
+    <script src="js/editor/stage.js"></script>
+    <script src="js/editor/menu.js"></script>
+    <script src="js/editor/tools.js"></script>
+    <script src="js/editor/utils.js"></script>
+    <script src="js/editor/functions.js"></script>
+    <script src="js/editor/events.js"></script>
+    <script src="js/editor/layers.js"></script>
+    <script src="js/editor/inspector.js"></script>
+    <script src="js/editor/colors.js"></script>
+    <script src="js/editor/bottom.js"></script>
+
+    <script src="js/editor/tools/select.js"></script>
+    <script src="js/editor/tools/move.js"></script>
+    <script src="js/editor/tools/text.js"></script>
+    <script src="js/editor/tools/line.js"></script>
+    <script src="js/editor/tools/box.js"></script>
+    <script src="js/editor/tools/circle.js"></script>
+    <script src="js/editor/tools/shape.js"></script>
+    <script src="js/editor/tools/eyedropper.js"></script>
+
+    <script src="js/keyboard.js"></script>
+    <script src="js/colorpicker.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/webfonts.js"></script>
+
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/editor.css">
+
+    <link rel="stylesheet" href="css/fontello-full.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/popup.css">
+
+</head>
+<body>
+    <div id="editor">
+        <table class="layout">
+            <tbody>
+                <tr><td id="menu" style=" height: 24px;" colspan="3"></td></tr>
+                <tr>
+                    <td id="inspector" style="height: 31px;" colspan="3">
+                        <table>
+                            <tbody>
+                                <tr><td class="title"></td><td class="body"></td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tools" style="width: 40px;"></td>
+                    <td id="stage"></td>
+                    <td id="side">
+                        <div id="layers" class="box">
+                            <div class="head">Layers</div>
+                            <div class="controls">
+                                <div style="background-color: rgb(86, 86, 86); height: 30px;">
+                                    <table class="table1">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="layers" class="body">
+                                <div style="background-color: rgb(198, 198, 198);">
+                                    <table template="layer" id="layerTemplate" class="layer table1">
+                                        <tbody>
+                                            <tr>
+                                                <td template-bind="lock" class="layerIcon icon-lock"></td>
+                                                <td template-bind="visibility" class="layerIcon icon-eye"></td>
+                                                <td template-bind="title" class="layerTitle">Layer Name</td>
+                                                <td template-bind="menu" style="width: 23px;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="colors" class="box">
+                            <div class="head">Colors</div>
+                            <div class="body"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="bottom" style="height: 56px;" colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+        _e = new Editor({
+
+            $element   : editor,
+            $menu      : menu,
+            $inspector : inspector,
+            $tools     : tools,
+            $stage     : stage,
+            $layers    : layers,
+            $colors    : colors,
+            $bottom    : bottom
+
+        });
+
+        console.log( _e.stage.canvas.root );
+
+        g = _e.layer.Group({name:'Icon'});
+
+        circle  = g.Circle({ cx: 250, cy: 250, r: 50, fill: 'green' });
+        circle2 = g.Circle({ cx: 300, cy: 300, r: 50, fill: 'yellow' });
+
+        text = _e.layer.Text({ name: 'Text Main', x: 100, y: 100, size: 150, fill: 'black', text:'MiO' });
+
+        //shape = _e.layer.Shape({});
+        //shape.import('{"points":[{"x":450,"y":200,"c1x":null,"c1y":null,"c2x":null,"c2y":null},{"x":525,"y":125,"c1x":null,"c1y":null,"c2x":null,"c2y":null},{"x":600,"y":200,"c1x":null,"c1y":null,"c2x":null,"c2y":null},{"x":600,"y":325,"c1x":null,"c1y":null,"c2x":null,"c2y":null},{"x":450,"y":200,"c1x":null,"c1y":null,"c2x":null,"c2y":null}],"stroke":"#333","fill":"rgba(0,0,0,0.2)","alpha":1,"blending":null,"rotation":0,"lineWidth":1,"shadow":false,"shadowBlur":0,"shadowColor":"black","shadowOffsetX":0,"shadowOffsetY":0,"_type":"Shape","name":"Shape"}');
+
+        //line = _e.layer.Line({x1:400,y1:125,x2:600,y2:375});
+
+        _e.render();
+
+        // call('json/fonts.json',function(fonts){
+        //     _e.fonts = fonts;
+        //     _e.fn.select([text,g]);
+        //     //_e.fn.select([shape]);
+        // },null,true,true);
+
+    </script>
+</body>
+</html>

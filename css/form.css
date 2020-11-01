@@ -1,0 +1,114 @@
+.form{}
+
+.form .form-table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: inline-table;
+    vertical-align: top;
+}
+
+.form .form-table tr{
+    border-bottom: 1px solid #0000000f;
+}
+
+.form .form-table tr:last-of-type{
+    border-bottom: none;
+}
+
+.form .form-table td{
+    padding: 10px;
+}
+
+.form .form-input-title{
+    /* display: none; */
+    /* background: #2196F3;  */
+    border-right: 1px solid #ccc;
+    /* text-align: right; */
+    text-transform: capitalize;
+    /* border-bottom: 1px solid rgb(35, 131, 208); */
+    /* color: #fff; */
+    font-size: 14px;
+    border-right: none;
+    /* text-align: right; */
+}
+.form .form-input-value{
+    position: relative;
+    vertical-align: top;
+}
+.form .form-input-value input, .form .form-input-value select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+    font-size: 20px;
+}
+
+.form .form-input-value input[type="color"]{
+    background: rgb(245, 245, 245);
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.form .form-input-value input[type="checkbox"]{
+    zoom:2;
+    padding: 0;
+    margin: 0;
+}
+
+.form .form-input-value select[multiple]{
+    overflow: auto;
+    border:none;
+    padding: 0;
+    /* height: 26px; */
+}
+
+.form .form-input-value select[multiple]:focus, .form .form-input-value select[multiple]:active{
+    border:none;
+    outline: none;
+}
+
+.form .form-input-value select option{
+    padding: 5px;
+}
+
+.form .form-input-value select[multiple] option{
+    padding: 10px;
+    text-align: center;
+    display:inline-block;
+}
+
+.form .form-input-value select[multiple] option:hover{
+    background: #eee;
+}
+
+.form .form-hidden{
+    display: none !important;
+}
+
+.form .form-input-description{
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: rgb(107, 107, 107);
+}
+
+.form .form-input-validation-holder{
+    text-align: right;
+}
+
+.form .form-input-validation{
+    background: rgb(230, 10, 142);
+    padding: 5px;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 3px;
+    display: inline-block;
+    border-radius: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

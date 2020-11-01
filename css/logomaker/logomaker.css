@@ -1,0 +1,329 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+[left]{
+    float:left;
+}
+
+[right]{
+    float:right;
+}
+
+[clear]{
+    clear:both;
+}
+
+body > table{
+    border-spacing: 0;
+    width: 100%;
+    height: 100%;;
+}
+
+body > table > tr{}
+
+body > table > tbody > tr > td{
+    vertical-align: top;
+    text-align: left;
+    padding: 0;
+}
+
+.header{
+    height: 30px;
+    background: #fbfbfb;
+    vertical-align: middle;
+    box-shadow: 0px 0px 30px #00000000;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    z-index: 1;
+}
+
+.header .logo{
+    color: #616161;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.header .logo span{
+    
+font-size: 12px;
+    
+color: #b5b5b5;
+}
+
+.header .button{
+    display: inline-block;
+    padding: 15px;
+    color: #9a9a9a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.footer{
+    height: 25px;
+    background: #dcdcdc;
+}
+
+#main{
+    position: relative;
+    overflow: hidden;
+}
+
+.stage{
+    
+}
+
+#side{
+    width: 400px;
+    background: #fefefe;
+    box-sizing: border-box;
+    border-right: 1px solid #e4e4e4;
+    /* padding-top: 20px; */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#side .title{
+    font-size: 15px;
+    padding: 0px;
+    padding-bottom: 10px;
+    color: #656565;
+    /* text-align: center; */
+}
+
+#side .title small{
+    
+font-size: 14px;
+}
+
+#side .input{
+    /* padding: 10px; */
+    margin-bottom: 20px;
+}
+
+#side .input input{
+    padding: 15px;
+    font-size: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    border-bottom: 1px solid #717171;
+    box-shadow: 0px 2px 10px #0000000f;
+    /* text-align: center; */
+}
+
+#side .subtitle{
+    margin-top: 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+#side .colors{
+    display: none;
+}
+
+#side #colors{}
+
+#side #colors .color{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 1px solid #0000000d;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #0000000d;
+    padding-top: 5px;
+}
+
+#side #colors .color-title{
+    font-size: 10px;
+    color: #bbb;
+}
+
+#side #colors .color-circle{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #0000001c;
+    border-radius: 60px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#side .button{
+    padding: 20px;
+    text-align: center;
+    background: #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+    margin-top: 30px;
+    /* border-bottom: 3px solid #ccc; */
+}
+
+#side .button:hover{
+    background: #476b9a;
+    color: #fff;
+    /* border-bottom: 3px solid #2c4a71; */
+}
+
+
+#side .button:active{
+    position: relative;
+    top: 2px;
+}
+
+#side .basic{
+    transition: left 0.5s ease-out;
+    left: 0%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#side .padding{
+    padding: 20px;
+}
+
+#side .message{
+    padding: 15px;
+    background: #03A9F4;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#side #slogan{
+    font-size: 20px;
+}
+
+#stage canvas{
+    
+}
+
+#stage{
+    width: 100%;
+    height: 100%;
+    overflow: overlay;
+    overflow-x: hidden;
+    padding-top: 5px;
+    padding-left: 5px;
+    background: #fdfdfd;
+    box-sizing: border-box;
+}
+
+#page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: -100%;
+    transition: left 0.5s ease-out;
+    z-index: 1;
+    background: #eaeaea;
+    /* box-shadow: 0px 0px 10px #000; */
+}
+
+#main.package #page{
+    left: 0%;
+}
+
+#main #page table{
+    width: 100%;
+    height: 100%;
+}
+
+#main #page tr{
+    
+}
+
+#main #page td{
+    
+}
+
+#main #page canvas{
+    
+}
+
+#main #page .preview{
+    text-align: center;
+}
+
+#main #page .preview .logo{
+    display: inline-block;
+}
+
+#main #page .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #00000012;
+}
+
+#stage .logo{
+    display:inline-block;
+    /* box-shadow: 0px 0px 5px #0000001c; */
+    border: 1px solid #e8e8e8;
+    box-sizing:border-box;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#stage .logo .logo-preloader{
+    text-align: center;
+    line-height: 250px;
+    width: 100%;
+    font-size: 20px;
+}
+
+#stage .logo .logo-canvas{
+}
+
+.logo-wrapper{
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top:100%;
+}
+
+*::-webkit-scrollbar-thumb, *::-webkit-scrollbar-button, *::-webkit-scrollbar-track{
+    background: #000;
+    width: 10px;
+}
+
+#side .details{
+    position: absolute;
+    top:0;
+    left: 100%;
+    transition: left 0.5s ease-out;
+    background: #fefefe;
+    width: 100%;
+    height: 100%;
+}
+
+#side.package .details{
+    left:0%;
+}
+
+#side.package .basic{
+    left:-100%;
+}
+
+.fullsize{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
